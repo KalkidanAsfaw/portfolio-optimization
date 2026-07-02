@@ -62,8 +62,3 @@ See [PLAN.md](PLAN.md) for the full breakdown and timeline.
 ```bash
 pytest tests -v
 ```
-
-## Key Dates
-
-- **Interim submission:** Sun 05 Jul 2026, 20:00 UTC (Task 1 + one model)
-- **Final submission:** Tue 07 Jul 2026, 20:00 UTC (all tasks + investment memo)

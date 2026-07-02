@@ -15,12 +15,12 @@ historical returns.
 
 ## Task 1 — Preprocess & Explore  → `01_eda_preprocessing.ipynb`, `data_loader.py`, `preprocessing.py`, `eda.py`
 
-- [ ] Fetch TSLA/BND/SPY via YFinance (2015-01-01 → 2026-06-30); cache to `data/raw`.
-- [ ] Clean: dtypes, missing dates/values (interpolate/ffill), sort by date.
-- [ ] EDA: closing-price trends, daily % change, rolling mean/std volatility.
-- [ ] Outlier detection on returns (z-score / extreme days).
-- [ ] Stationarity: ADF test on close prices **and** daily returns; interpret (→ `d`).
-- [ ] Risk metrics: Value at Risk (95%), annualized Sharpe ratio.
+- [x] Fetch TSLA/BND/SPY via YFinance (2015-01-01 → 2026-06-30); cache to `data/raw`.
+- [x] Clean: dtypes, missing dates/values (interpolate/ffill), sort by date.
+- [x] EDA: closing-price trends, daily % change, rolling mean/std volatility.
+- [x] Outlier detection on returns (z-score / extreme days).
+- [x] Stationarity: ADF test on close prices **and** daily returns; interpret (→ `d`).
+- [x] Risk metrics: Value at Risk (95%), annualized Sharpe ratio.
 - **Deliverables:** notebook, data-quality summary, ADF results, ≥3 visualizations.
 
 ## Task 2 — Forecasting Models  → `02_forecasting_models.ipynb`, `forecasting.py`

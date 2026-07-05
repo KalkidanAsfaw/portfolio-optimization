@@ -100,17 +100,15 @@ def make_sequences(values: np.ndarray, window: int = config.LSTM_WINDOW):
 
 def build_lstm(window: int = config.LSTM_WINDOW, units: int = 50, layers: int = 2):
     """Construct the LSTM: input -> LSTM layer(s) -> Dense(1)."""
-    from tensorflow.keras.layers import LSTM, Dense, Dropout
+    from tensorflow.keras.layers import LSTM, Dense, Dropout, Input
     from tensorflow.keras.models import Sequential
 
     tf_set_seed()
     model = Sequential()
+    model.add(Input(shape=(window, 1)))
     for i in range(layers):
         return_seq = i < layers - 1
-        if i == 0:
-            model.add(LSTM(units, return_sequences=return_seq, input_shape=(window, 1)))
-        else:
-            model.add(LSTM(units, return_sequences=return_seq))
+        model.add(LSTM(units, return_sequences=return_seq))
         model.add(Dropout(0.2))
     model.add(Dense(1))
     model.compile(optimizer="adam", loss="mean_squared_error")

@@ -25,13 +25,14 @@ historical returns.
 
 ## Task 2 — Forecasting Models  → `02_forecasting_models.ipynb`, `forecasting.py`
 
-- [ ] Chronological split: train 2015–2024, test 2025–2026 (no shuffling).
-- [ ] ARIMA/SARIMA via `auto_arima` (or ACF/PACF); document (p,d,q)(P,D,Q,m).
-- [ ] LSTM: 60-day windows, scaling, LSTM layer(s) → Dense; tune epochs/batch/lr.
-- [ ] Evaluate both on test set: MAE, RMSE, MAPE → comparison table.
-- [ ] Discuss which model wins and why.
+- [x] Chronological split: train 2015–2024, test 2025–2026 (no shuffling).
+- [x] ARIMA/SARIMA via `auto_arima` (or ACF/PACF); document (p,d,q)(P,D,Q,m).
+- [x] LSTM: 60-day windows, scaling, LSTM layer(s) → Dense; tune epochs/batch/lr.
+- [x] Evaluate both on test set: MAE, RMSE, MAPE → comparison table.
+- [x] Discuss which model wins and why (incl. one-step random-walk baseline).
 - **Deliverables:** trained ARIMA + LSTM, metrics table, selection rationale.
 - **Interim target:** at least the ARIMA model complete by Sun 05 Jul.
+- **Result:** random walk (1-step) beats LSTM beats multi-step ARIMA — a strong EMH finding.
 
 ## Task 3 — Forecast Future Trends  → `03_future_forecast.ipynb`
 

@@ -24,7 +24,7 @@ def adf_test(series: pd.Series, name: str | None = None) -> dict:
         "n_lags": nlags,
         "n_obs": nobs,
         "critical_values": crit,
-        "stationary": pvalue < 0.05,
+        "stationary": bool(pvalue < 0.05),
     }
 
 

@@ -14,8 +14,8 @@ seaborn>=0.13
 statsmodels>=0.14
 pmdarima>=2.0
 
-# Deep learning (LSTM)
-tensorflow>=2.15
+# Deep learning (LSTM) — CPU build; use "tensorflow" if you have GPU
+tensorflow-cpu>=2.15
 
 # ML utilities
 scikit-learn>=1.3

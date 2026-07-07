@@ -47,6 +47,15 @@ models/
 # Reports build artifacts
 reports/*.pdf
 
+# Local scratch / backup (not tracked)
+backup/
+
+# Interim report (kept local, not tracked)
+reports/interim_report.*
+
+# Unrelated coursework (kept local, not tracked)
+conflict-resolution/
+
 # Test / coverage
 .pytest_cache/
 .coverage

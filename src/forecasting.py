@@ -123,6 +123,32 @@ def tf_set_seed(seed: int = config.RANDOM_SEED):
     tf.random.set_seed(seed)
 
 
+def fit_lstm(
+    series: pd.Series,
+    window: int = config.LSTM_WINDOW,
+    units: int = 50,
+    layers: int = 2,
+    epochs: int = 20,
+    batch_size: int = 32,
+    verbose: int = 0,
+):
+    """Fit an LSTM (and its MinMax scaler) on an entire price series.
+
+    Use this to train on the full history before forecasting the future, so the
+    scaler covers current price levels. Returns ``(model, scaler, history)``.
+    """
+    from sklearn.preprocessing import MinMaxScaler
+
+    scaler = MinMaxScaler()
+    scaled = scaler.fit_transform(series.values.reshape(-1, 1)).reshape(-1)
+    X, y = make_sequences(scaled, window)
+    model = build_lstm(window, units=units, layers=layers)
+    history = model.fit(
+        X, y, epochs=epochs, batch_size=batch_size, validation_split=0.1, verbose=verbose
+    )
+    return model, scaler, history
+
+
 def run_lstm_pipeline(
     train: pd.Series,
     test: pd.Series,

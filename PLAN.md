@@ -36,28 +36,28 @@ historical returns.
 
 ## Task 3 — Forecast Future Trends  → `03_future_forecast.ipynb`
 
-- [ ] Best model → 6–12 month future forecast.
-- [ ] Plot historical vs. test predictions vs. future, with confidence intervals.
-- [ ] Trend analysis; discuss how CI width grows over the horizon (reliability).
-- [ ] Opportunities & risks from the forecast.
+- [x] Best model → 6–12 month future forecast.
+- [x] Plot historical vs. test predictions vs. future, with confidence intervals.
+- [x] Trend analysis; discuss how CI width grows over the horizon (reliability).
+- [x] Opportunities & risks from the forecast.
 - **Deliverables:** forecast plot w/ CIs, trend summary, opportunities/risks, reliability note.
 
 ## Task 4 — Portfolio Optimization (MPT)  → `04_portfolio_optimization.ipynb`, `optimization.py`
 
-- [ ] Expected returns: TSLA from forecast, BND/SPY from historical (annualized).
-- [ ] Annualized covariance matrix of daily returns.
-- [ ] Efficient frontier via PyPortfolioOpt / scipy.optimize.
-- [ ] Mark Max-Sharpe (tangency) & Min-Volatility portfolios.
-- [ ] Recommend a portfolio: weights, expected return, volatility, Sharpe + justification.
+- [x] Expected returns: TSLA from forecast, BND/SPY from historical (annualized).
+- [x] Annualized covariance matrix of daily returns.
+- [x] Efficient frontier via PyPortfolioOpt / scipy.optimize.
+- [x] Mark Max-Sharpe (tangency) & Min-Volatility portfolios.
+- [x] Recommend a portfolio: weights, expected return, volatility, Sharpe + justification.
 - **Deliverables:** frontier plot, covariance heatmap, recommendation + 1-paragraph justification.
 
 ## Task 5 — Backtesting  → `05_backtesting.ipynb`, `backtesting.py`
 
-- [ ] Backtest window: last year of data (~Jul 2025 → Jun 2026), out-of-sample.
-- [ ] Benchmark: static 60% SPY / 40% BND.
-- [ ] Simulate strategy (hold initial weights; optional monthly rebalance).
-- [ ] Metrics: total return, annualized return, Sharpe, max drawdown.
-- [ ] Cumulative returns plot; conclude on viability + limitations.
+- [x] Backtest window: last year of data (~Jul 2025 → Jun 2026), out-of-sample.
+- [x] Benchmark: static 60% SPY / 40% BND.
+- [x] Simulate strategy (hold initial weights; optional monthly rebalance).
+- [x] Metrics: total return, annualized return, Sharpe, max drawdown.
+- [x] Cumulative returns plot; conclude on viability + limitations.
 - **Deliverables:** cumulative-returns plot, metrics table, 1–2 paragraph conclusion.
 
 ---
